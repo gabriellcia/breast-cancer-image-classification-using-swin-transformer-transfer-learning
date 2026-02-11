@@ -6,7 +6,7 @@ The notebook provides an end-to-end workflow, including data loading from extern
 
 The experiments are primarily designed to run in Google Colab, but they can also be executed in a local Jupyter Notebook setup with minor modifications to the directory paths.
 
-📂 Dataset
+# 📂 Dataset
 
 Because of repository size limitations, the datasets are stored externally on Google Drive. Please download or mount them before running the code.
 
@@ -17,3 +17,27 @@ Because of repository size limitations, the datasets are stored externally on Go
 After downloading, place the folders inside a directory such as data/, or mount Google Drive in Colab and update the paths accordingly.
 
 This implementation is intended as a lightweight educational project, suitable for introductory experimentation, baseline development, and comparison with models trained from scratch.
+
+# 🧠 Implementation Overview
+
+The notebook includes:
+
+1. Data Preparation
+
+- Loading image files from Google Drive
+- Preprocessing such as resizing and normalization
+- Data augmentation for better generalization
+
+2. Model Setup
+
+- Initializing a Swin Transformer with pretrained ImageNet weights
+- Adapting and replacing the final classification head for binary or multiclass prediction
+
+3. Training and Evaluation
+
+- Fine-tuning through transfer learning
+- Monitoring training and validation loss
+- Tracking accuracy across epochs
+- Calculating classification performance metrics
+
+This project is intended to be a simple and reproducible demonstration, suitable for learning purposes and preliminary experimental research.
